@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-lr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LiveReload extension for Laravel Elixir",
   "main": "index.js",
   "scripts": {
@@ -22,9 +22,7 @@
   },
   "homepage": "https://github.com/sahibalejandro/laravel-elixir-lr",
   "dependencies": {
-    "gulp": "^3.8.11",
     "gulp-livereload": "^3.8.0",
-    "gulp-util": "^3.0.4",
-    "laravel-elixir": "^0.18.7"
+    "gulp-util": "^3.0.4"
   }
 }
