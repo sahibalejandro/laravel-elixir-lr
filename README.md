@@ -7,7 +7,7 @@ LiveReload extension for Laravel Elixir
 
 ## Usage
 
-    var elixir = require('elixir');
+    var elixir = require('laravel-elixir');
     require('laravel-elixir-lr');
     
     elixir(function (mix) {
