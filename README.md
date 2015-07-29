@@ -1,24 +1,41 @@
 # laravel-elixir-lr
-LiveReload extension for Laravel Elixir
+The LiveReload extension for Laravel Elixir.
 
 ## Install
 
-    npm install laravel-elixir-lr --save-dev
+```javascript
+npm install laravel-elixir-lr --save-dev
+```
 
 ## Usage
 
-    var elixir = require('laravel-elixir');
-    require('laravel-elixir-lr');
+Just add the extension to your glup file and mix it! The LiveReload server will watch your
+files for changes **only when you run `gulp watch` task.**
+
+```javascript
+var elixir = require('laravel-elixir');
+require('laravel-elixir-lr');
+
+elixir(function (mix) {
+    mix.livereload();
+});
+```
+
+By default the extension will watch this files:
+
+```javascript
+[
+    './app/**/*.php',
+    './public/**/*.+(css|js|jpg|png)',
+    './resources/**/*.php'
+]
+```
     
-    elixir(function (mix) {
-        mix.livereload();
-    });
-    
-You can specify which files you want to be watched...
+But you can specify which files you want to be watched:
 
-    mix.livereload(['my/css/styles.css', 'my/js/scripts.js']);
-
-By default the extension watch for `['./app/**/*.php', './public/**/*.+(css|js|jpg|png)', './resources/**/*.php']`.
-
-## Notes
-The livereload server only starts when you run `gulp watch`
+```javascript
+mix.livereload([
+    'my/css/styles.css',
+    'my/js/scripts.js'
+]);
+````
