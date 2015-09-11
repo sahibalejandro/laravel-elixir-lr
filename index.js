@@ -18,7 +18,19 @@ elixir.extend('livereload', function(files) {
     return this;
 });
 
+/**
+ * Check if the "watch" task is on the arguments.
+ *
+ * @returns {boolean}
+ */
 function onWatchTask() {
-    return gutil.env._[0] == 'watch';
+
+    for (var i = 0; i < gutil.env._.length; i++) {
+        if (gutil.env._[i] == 'watch') {
+            return true;
+        }
+    }
+
+    return false;
 }
 
